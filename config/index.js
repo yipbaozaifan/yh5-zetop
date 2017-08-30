@@ -32,8 +32,8 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/comment': {
-        target: 'http://mdc.meizu.com',
+      '/message': {
+        target: 'http://127.0.0.1:3000',
         changeOrigin: true,
       },
     },

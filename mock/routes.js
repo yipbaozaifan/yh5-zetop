@@ -1,3 +1,3 @@
 module.exports = {
-  '/user_info': '/userInfo',
+  '/message': '/userInfo',
 }
