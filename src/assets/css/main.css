@@ -1,0 +1,21 @@
+#message-show-bar {
+	width: 80%;
+	margin: 50px auto;
+	background-color: #000;
+	text-align: center;
+	color: #fff;
+}
+.button-bar{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+#show-btn{
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	background-color: #a1a1a1;
+	color: #000;
+	line-height: 2em;
+	font-size: 16px;
+}

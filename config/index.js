@@ -27,36 +27,7 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/album_file': {
-        target: 'http://mdc.meizu.com',
-        changeOrigin: true,
-      },
-      '/article': {
-        target: 'http://mdc.meizu.com',
-        changeOrigin: true,
-      },
-      '/member': {
-        target: 'http://mdc.meizu.com',
-        changeOrigin: true,
-      },
-      '/upload': {
-        target: 'http://mdc.meizu.com',
-        changeOrigin: true,
-      },
-      '/ueditor': {
-        target: 'http://mdc.meizu.com',
-        changeOrigin: true,
-      },
-      '/uploads/album': {
-        target: 'http://mblog.res.meizu.com',
-        changeOrigin: true,
-      },
-      '/comment': {
-        target: 'http://mdc.meizu.com',
-        changeOrigin: true,
-      },
-    },
+    proxyTable: {},
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
