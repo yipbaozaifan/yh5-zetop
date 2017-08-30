@@ -1,8 +1,9 @@
+// webpack public base config
+
 var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
-var vueLoaderConfig = require('./vue-loader.conf')
-var ProgressBarPlugin = require('progress-bar-webpack-plugin')
+var ProgressBarPlugin = require('progress-bar-webpack-plugin') //进度条插件
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -20,28 +21,19 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
-      'vue$': 'vue/dist/vue.esm.js',
-      'axios$': 'axios/dist/axios.min.js',
-      'vue-router$': 'vue-router/dist/vue-router.min.js',
-      'vuex$': 'vuex/dist/vuex.min.js',
       '@': resolve('src'),
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/components'),
-      'store': path.resolve(__dirname, '../src/store'),
-      'router': path.resolve(__dirname, '../src/router'),
-      'views': path.resolve(__dirname, '../src/views'),
       'api': path.resolve(__dirname, '../src/api'),
     }
   },
   module: {
     rules: [
       {
-        test: /\.(js|vue)$/,
+        test: /\.js$/,
         loader: 'eslint-loader',
         enforce: 'pre',
         include: [resolve('src'), resolve('test')],
@@ -49,11 +41,6 @@ module.exports = {
         options: {
           formatter: require('eslint-friendly-formatter')
         }
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: vueLoaderConfig
       },
       {
         test: /\.js$/,

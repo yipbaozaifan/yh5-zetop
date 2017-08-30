@@ -1,9 +1,11 @@
-// see http://vuejs-templates.github.io/webpack for documentation.
+// 全局配置
 var path = require('path')
 
 module.exports = {
   build: {
-    env: require('./prod.env'),
+    env: {
+	  NODE_ENV: '"production"'
+	},
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
@@ -22,12 +24,19 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report
   },
   dev: {
-    env: require('./dev.env'),
+    env: {
+	  NODE_ENV: '"development"'
+	},
     port: 8081,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/comment': {
+        target: 'http://mdc.meizu.com',
+        changeOrigin: true,
+      },
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

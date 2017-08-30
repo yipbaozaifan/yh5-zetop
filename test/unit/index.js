@@ -1,9 +1,6 @@
-import Vue from 'vue';
-
-Vue.config.productionTip = false;
-
+// 测试入口文件，运行程序代码和测试用例
 // require all test files (files that ends with .spec.js)
-const testsContext = require.context('./specs', true, /\.spec$/);
+const testsContext = require.context('./spec', true, /\.spec$/);
 testsContext.keys().forEach(testsContext);
 
 // require all src files except main.js for coverage.

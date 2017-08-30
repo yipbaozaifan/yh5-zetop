@@ -14,7 +14,8 @@ module.exports = function (config) {
     browsers: ['PhantomJS'],
     frameworks: ['mocha', 'sinon-chai', 'phantomjs-shim'],
     reporters: ['spec', 'coverage'],
-    files: ['./index.js'],
+    files: ['../../src/main.js', './spec/test.spec.js'],
+    // 预加载器
     preprocessors: {
       './index.js': ['webpack', 'sourcemap']
     },
@@ -22,6 +23,7 @@ module.exports = function (config) {
     webpackMiddleware: {
       noInfo: true,
     },
+    // 统计测试代码覆盖率
     coverageReporter: {
       dir: './coverage',
       reporters: [
