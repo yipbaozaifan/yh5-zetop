@@ -1,3 +1,4 @@
+// 需单独运行node mock/server.js
 const jsonServer = require('json-server');
 const db = require('./db.js');
 const routes = require('./routes.js');
